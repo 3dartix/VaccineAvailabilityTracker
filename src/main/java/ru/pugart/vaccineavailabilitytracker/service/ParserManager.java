@@ -42,7 +42,7 @@ public class ParserManager {
             return;
         }
 
-        plugins.forEach(Runnable::run);
+        plugins.forEach(plugin -> new Thread(plugin).start());
     }
 
     @Scheduled(fixedDelay = 10000)

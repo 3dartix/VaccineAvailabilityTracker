@@ -13,7 +13,7 @@ public abstract class Plugin implements Runnable {
     List<Location> locations;
     String pluginName;
 
-    List<Location> start;
+    abstract void start();
 
     public List<Location> getLocations() {
         return new ArrayList<>(locations);

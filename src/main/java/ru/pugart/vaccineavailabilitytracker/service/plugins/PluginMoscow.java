@@ -28,7 +28,8 @@ public class PluginMoscow extends Plugin {
     }
 
     @SneakyThrows
-    private void start(){
+    @Override
+    void start(){
         setState(PROCESSING);
 
         WebDriver driver = DriverInitializer.getWebDriver();
